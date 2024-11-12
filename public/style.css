@@ -1,0 +1,91 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+label {
+  font-size: 16px;
+  color: #555;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+button[type="button"] {
+  background-color: #007bff;
+}
+
+.schedule-button {
+  margin-top: 10px;
+  background-color: #28a745;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f4f6;
+}

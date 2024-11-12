@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SJF Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Shortest Job First Scheduler</h1>
+      <div class="card">
+        <form id="processForm">
+          <h2>Add Process Details</h2>
+          <label>Process ID: <input type="number" name="pid" required /></label>
+          <label
+            >Arrival Time: <input type="number" name="arrivalTime" required
+          /></label>
+          <label
+            >Burst Time: <input type="number" name="burstTime" required
+          /></label>
+          <button type="button" onclick="addProcess()">Add Process</button>
+        </form>
+        <button class="schedule-button" onclick="scheduleProcesses()">
+          Schedule Processes
+        </button>
+      </div>
+
+      <div class="card">
+        <h2>Process Schedule</h2>
+        <table id="processTable">
+          <tr>
+            <th>Process ID</th>
+            <th>Arrival Time</th>
+            <th>Burst Time</th>
+            <th>Completion Time</th>
+            <th>Turnaround Time</th>
+            <th>Waiting Time</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
