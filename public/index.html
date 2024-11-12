@@ -3,38 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SJF Scheduler</title>
+    <title>Kitchen Order Scheduler</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <h1>Shortest Job First Scheduler</h1>
+      <h1>Kitchen Order Scheduler</h1>
       <div class="card">
-        <form id="processForm">
-          <h2>Add Process Details</h2>
-          <label>Process ID: <input type="number" name="pid" required /></label>
-          <label
-            >Arrival Time: <input type="number" name="arrivalTime" required
-          /></label>
-          <label
-            >Burst Time: <input type="number" name="burstTime" required
-          /></label>
-          <button type="button" onclick="addProcess()">Add Process</button>
+        <form id="orderForm">
+          <h2>Add New Order</h2>
+          <div class="form-group">
+            <label>Order ID:</label>
+            <input type="number" name="pid" required />
+          </div>
+          <div class="form-group">
+            <label>Order Time (mins):</label>
+            <input type="number" name="arrivalTime" required />
+          </div>
+          <div class="form-group">
+            <label>Preparation Time (mins):</label>
+            <input type="number" name="burstTime" required />
+          </div>
+          <button type="button" onclick="addOrder()">Add Order</button>
+          <button class="schedule-button" onclick="scheduleOrders()">Schedule Orders</button>
         </form>
-        <button class="schedule-button" onclick="scheduleProcesses()">
-          Schedule Processes
-        </button>
+        
       </div>
 
       <div class="card">
-        <h2>Process Schedule</h2>
-        <table id="processTable">
+        <h2>Order Schedule</h2>
+        <table id="orderTable">
           <tr>
-            <th>Process ID</th>
-            <th>Arrival Time</th>
-            <th>Burst Time</th>
+            <th>Order ID</th>
+            <th>Order Time</th>
+            <th>Preparation Time</th>
             <th>Completion Time</th>
-            <th>Turnaround Time</th>
+            <th>Total Time in Kitchen</th>
             <th>Waiting Time</th>
           </tr>
         </table>
